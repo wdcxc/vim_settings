@@ -85,19 +85,18 @@ endif
 
 " settings
 set nu
-" 将制表符扩展为空格
-set expandtab
-" 设置编辑时制表符占用空格数
-set tabstop=4
-" 设置格式化时制表符占用空格数
-set shiftwidth=4
-" 让 vim 把连续数量的空格视为一个制表符
-set softtabstop=4
-set history=50		" keep 50 lines of command line history
-set ruler		" show the cursor position all the time
-set showcmd		" display incomplete commands
-set incsearch		" do incremental searching
-
+set expandtab " 将制表符扩展为空格
+set tabstop=4 " 设置编辑时制表符占用空格数
+set shiftwidth=4 " 设置格式化时制表符占用空格数
+set softtabstop=4 " 让 vim 把连续数量的空格视为一个制表符
+set history=50 " keep 50 lines of command line history
+set ruler " show the cursor position all the time
+set showcmd	" display incomplete commands
+set ignorecase
+set incsearch " do incremental searching 输入搜索内容时就显示搜索结果
+set laststatus=2 " 显示状态栏 (默认值为 1, 无法显示状态栏)
+set autoread " Set to auto read when a file is changed from the outside
+" set nohlsearch
 " 配色方案
 set t_Co=256
 set background=dark
@@ -106,15 +105,15 @@ colorscheme molokai
 
 let mapleader = ';'
 
+autocmd BufEnter * cd %:p:h " 工作目录随文件变 
+
 " key mapping
 map <c-j> <c-w>j
 map <c-k> <c-w>k
 map <c-h> <c-w>h
 map <c-l> <c-w>l
-
-nmap <F2> :TagbarToggle<CR>
-map <F3> :NERDTreeToggle<CR>
-
+map <F2> :NERDTreeToggle<CR> 
+nmap <F3> :TagbarToggle<CR>
 " 映射切换buffer的键位
 nnoremap [b :bp<CR>
 nnoremap ]b :bn<CR>

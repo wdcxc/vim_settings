@@ -68,4 +68,4 @@ let g:tagbar_iconchars=['▸','▾']
 "let g:tagbar_autoshowtag=0
 "let g:tagbar_autopreview=1
 "let g:tagbar_previewwin_pos=""
-autocmd BufReadPost *.* call tagbar#autoopen()
+"autocmd BufReadPost *.* call tagbar#autoopen()

@@ -21,6 +21,8 @@ Plugin 'jiangmiao/auto-pairs'
 Plugin 'Valloric/YouCompleteMe'
 " 自动生成和更新ctags文件，需要先装好ctags
 Plugin 'ludovicchabant/vim-gutentags'
+Plugin 'godlygeek/tabular'
+Plugin 'plasticboy/vim-markdown'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
